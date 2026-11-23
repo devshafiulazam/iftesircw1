@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="bn" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>কিডস কার্নিভাল (Kids Carnival) | বাচ্চাদের প্রিমিয়াম পোশাক ও বেবি এক্সেসরিজ</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Hind Siliguri & Noto Sans Bengali -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Hind Siliguri"', '"Noto Sans Bengali"', 'sans-serif'],
+                    },
+                    colors: {
+                        carnival: {
+                            coral: '#FF5757',
+                            coralHover: '#E63E3E',
+                            amber: '#F59E0B',
+                            amberLight: '#FEF3C7',
+                            navy: '#0F172A',
+                            slate: '#1E293B',
+                            teal: '#0D9488',
+                            cream: '#FFFDF9'
+                        }
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 30px -5px rgba(15, 23, 42, 0.07)',
+                        'card': '0 6px 24px -4px rgba(15, 23, 42, 0.08)',
+                        'cta': '0 10px 25px -4px rgba(255, 87, 87, 0.4)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Hind Siliguri', 'Noto Sans Bengali', sans-serif;
+            background-color: #FFFDF9;
+            color: #0F172A;
+            overflow-x: hidden;
+        }
+        /* Subtle playful confetti dots for hero background */
+        .hero-bg {
+            background-color: #FFFDF9;
+            background-image: 
+                radial-gradient(rgba(255, 87, 87, 0.14) 2px, transparent 2px),
+                radial-gradient(rgba(245, 158, 11, 0.16) 2px, #FFFDF9 2px);
+            background-size: 40px 40px;
+            background-position: 0 0, 20px 20px;
+        }
+        /* Smooth FAQ accordion */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease, padding 0.3s ease;
+        }
+        .faq-box.open .faq-answer {
+            max-height: 260px;
+        }
+        .faq-box.open .faq-chevron {
+            transform: rotate(180deg);
+        }
+        @keyframes pulseFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+        }
+        .float-badge {
+            animation: pulseFloat 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-carnival-coral selection:text-white pb-20 md:pb-0">
+
+    <!-- Top Promotional Offer Ticker -->
+    <div class="bg-carnival-navy text-white text-xs sm:text-sm py-2 px-4 text-center font-medium border-b border-slate-800">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-2">
+            <span class="bg-carnival-amber text-carnival-navy text-[11px] font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wide">অনলাইন স্পেশাল</span>
+            <span>সব পণ্যে <strong class="text-amber-300">৩৫% পর্যন্ত ছাড়!</strong> ২টি পণ্য অর্ডারে <strong class="text-teal-300">ডেলিভারি চার্জ ফ্রি</strong> • আগে পণ্য দেখুন, পরে টাকা দিন</span>
+        </div>
+    </div>
+
+    <!-- 1. NAVIGATION BAR -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-amber-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 sm:h-[70px]">
+                <!-- Brand Identity: Kids Carnival -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-gradient-to-tr from-carnival-coral to-carnival-amber flex items-center justify-center text-white shadow-md group-hover:rotate-6 transition-transform">
+                        <i class="fa-solid fa-crown text-lg sm:text-xl"></i>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-1.5">
+                            <span class="text-xl sm:text-2xl font-bold text-carnival-navy tracking-tight leading-none">কিডস কার্নিভাল</span>
+                            <span class="hidden sm:inline-block text-[10px] font-bold bg-amber-100 text-amber-800 px-2 py-0.5 rounded-full">KIDS CARNIVAL</span>
+                        </div>
+                        <span class="text-[11px] sm:text-xs text-slate-500 font-medium block mt-0.5">সোনামণির রঙিন ফ্যাশন ও কেয়ার</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center gap-7 text-[15px] font-semibold text-slate-700">
+                    <a href="#collection" class="hover:text-carnival-coral transition-colors">কালেকশন ও দাম</a>
+                    <a href="#delivery" class="hover:text-carnival-coral transition-colors">ডেলিভারি প্রক্রিয়া</a>
+                    <a href="#reviews" class="hover:text-carnival-coral transition-colors">কাস্টমার রিভিউ</a>
+                    <a href="#support" class="hover:text-carnival-coral transition-colors">সমস্যা ও সমাধান</a>
+                    <a href="#faq" class="hover:text-carnival-coral transition-colors">জিজ্ঞাসা (FAQ)</a>
+                    <a href="#contact" class="hover:text-carnival-coral transition-colors">যোগাযোগ</a>
+                </nav>
+
+                <!-- Primary Header CTA -->
+                <div class="flex items-center gap-2.5">
+                    <a href="https://wa.me/8801700000000" target="_blank" class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 hover:bg-emerald-600 hover:text-white border border-emerald-200 flex items-center justify-center transition-colors" title="হোয়াটসঅ্যাপে মেসেজ দিন">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                    </a>
+                    <button onclick="openOrderModal('স্পেশাল ৩-পিস কিডস কম্বো অফার', 1190)" class="inline-flex items-center gap-2 bg-carnival-coral hover:bg-carnival-coralHover text-white font-bold text-sm sm:text-[15px] px-4 sm:px-5 py-2.5 rounded-xl shadow-cta transition-all active:scale-95">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span>অর্ডার করুন</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. COMPACT, HIGH-IMPACT HERO SECTION -->
+    <section class="hero-bg pt-6 pb-10 sm:pt-10 sm:pb-14 border-b border-amber-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                
+                <!-- Left Hero Content & Core Product USPs -->
+                <div class="lg:col-span-6 space-y-5 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-white border border-amber-200 px-3.5 py-1.5 rounded-full shadow-sm">
+                        <span class="flex h-2.5 w-2.5 relative">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-carnival-coral opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-carnival-coral"></span>
+                        </span>
+                        <span class="text-xs sm:text-sm font-bold text-carnival-navy">ফেসবুক ও ইউটিউবের ভাইরাল কিডস কালেকশন</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-4xl lg:text-[44px] font-bold text-carnival-navy leading-[1.22] tracking-tight">
+                        সোনামণির আরাম ও স্টাইলে <span class="text-carnival-coral">১০০% পিওর কটন</span> পোশাক ও বেবি সামগ্রী
+                    </h1>
+
+                    <p class="text-slate-600 text-base sm:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0">
+                        নবজাতক থেকে ১০ বছর বয়সী বাচ্চাদের সফট সুতি ড্রেস, ফিডিং সেট ও সেফটি এক্সেসরিজ। অগ্রিম টাকা ছাড়াই পার্সেল খুলে চেক করে পেমেন্ট করার সুবিধা।
+                    </p>
+
+                    <!-- 4 Core Product USPs Grid right inside Hero -->
+                    <div class="grid grid-cols-2 gap-2.5 sm:gap-3 pt-1 max-w-xl mx-auto lg:mx-0">
+                        <div class="bg-white p-3 rounded-2xl border border-slate-200/80 shadow-sm flex items-center gap-3 text-left">
+                            <div class="w-9 h-9 rounded-xl bg-rose-50 text-carnival-coral flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-feather-pointed"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xs sm:text-sm font-bold text-carnival-navy">১০০% পিওর সফট কটন</h3>
+                                <p class="text-[11px] text-slate-500">ত্বকে কোনো র‍্যাশ হবে না</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-3 rounded-2xl border border-slate-200/80 shadow-sm flex items-center gap-3 text-left">
+                            <div class="w-9 h-9 rounded-xl bg-teal-50 text-carnival-teal flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-box-open"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xs sm:text-sm font-bold text-carnival-navy">ওপেন-বক্স COD</h3>
+                                <p class="text-[11px] text-slate-500">চেক করে ক্যাশ পেমেন্ট</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-3 rounded-2xl border border-slate-200/80 shadow-sm flex items-center gap-3 text-left">
+                            <div class="w-9 h-9 rounded-xl bg-amber-50 text-carnival-amber flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-rotate"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xs sm:text-sm font-bold text-carnival-navy">৭-দিনের সাইজ এক্সচেঞ্জ</h3>
+                                <p class="text-[11px] text-slate-500">সহজ পরিবর্তনের নিশ্চয়তা</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-3 rounded-2xl border border-slate-200/80 shadow-sm flex items-center gap-3 text-left">
+                            <div class="w-9 h-9 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-tags"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xs sm:text-sm font-bold text-carnival-navy">৩৫% স্পেশাল ছাড়</h3>
+                                <p class="text-[11px] text-slate-500">সীমিত সময়ের অনলাইন অফার</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Primary Hero CTAs -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 pt-2">
+                        <a href="#collection" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-carnival-coral hover:bg-carnival-coralHover text-white font-bold text-base px-7 py-3.5 rounded-2xl shadow-cta transition-all hover:-translate-y-0.5">
+                            <span>কালেকশন দেখুন</span>
+                            <i class="fa-solid fa-arrow-down text-sm"></i>
+                        </a>
+                        <button onclick="openOrderModal('স্পেশাল ৩-পিস কিডস কম্বো অফার', 1190)" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-carnival-navy hover:bg-carnival-slate text-white font-bold text-base px-7 py-3.5 rounded-2xl shadow-md transition-all hover:-translate-y-0.5">
+                            <i class="fa-solid fa-bolt text-carnival-amber"></i>
+                            <span>সরাসরি অর্ডার করুন</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Hero Product Feature Showcase Card -->
+                <div class="lg:col-span-6">
+                    <div class="relative bg-white p-4 sm:p-5 rounded-3xl shadow-soft border border-amber-200/70">
+                        <!-- Floating Social Proof Pill -->
+                        <div class="absolute -top-3.5 right-4 z-10 bg-carnival-navy text-white text-xs font-bold px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 float-badge">
+                            <i class="fa-solid fa-star text-carnival-amber"></i>
+                            <span>৪.৯★ রেটিং (৩,২০০+ সন্তুষ্ট অভিভাবক)</span>
+                        </div>
+
+                        <div class="grid grid-cols-12 gap-3.5 items-stretch">
+                            <!-- Left Featured SVG Illustration Card -->
+                            <div class="col-span-12 sm:col-span-7 bg-gradient-to-br from-amber-50 via-rose-50 to-orange-50 rounded-2xl p-4 border border-amber-100 flex flex-col justify-between relative overflow-hidden">
+                                <div class="flex items-center justify-between z-10">
+                                    <span class="bg-carnival-coral text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full">হট ডিল • ৩৫% ছাড়</span>
+                                    <span class="text-xs font-bold text-slate-600 bg-white/80 px-2 py-0.5 rounded-lg">বয়স: ৬ মাস - ৮ বছর</span>
+                                </div>
+
+                                <!-- Bespoke Kids Apparel & Toys SVG Illustration -->
+                                <div class="my-3 flex items-center justify-center">
+                                    <svg viewBox="0 0 260 175" class="w-full max-w-[230px] h-auto drop-shadow-sm" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <!-- Soft Sun / Circle Backdrop -->
+                                        <circle cx="130" cy="88" r="72" fill="#FEF3C7"/>
+                                        <circle cx="195" cy="45" r="14" fill="#FF5757" fill-opacity="0.18"/>
+                                        <circle cx="58" cy="128" r="18" fill="#0D9488" fill-opacity="0.15"/>
+                                        <!-- Cute Kids Cotton T-Shirt -->
+                                        <path d="M72 48L95 36C103 44 121 44 129 36L152 48L168 74L148 84L142 70V136H82V70L76 84L56 74L72 48Z" fill="#FF5757" stroke="#0F172A" stroke-width="3" stroke-linejoin="round"/>
+                                        <!-- Collar & Stripes -->
+                                        <path d="M95 36C103 45 121 45 129 36" stroke="#FFFDF9" stroke-width="3" stroke-linecap="round"/>
+                                        <rect x="83.5" y="88" width="57" height="10" fill="#FBBF24"/>
+                                        <rect x="83.5" y="106" width="57" height="8" fill="#FFFDF9"/>
+                                        <!-- Cute Star Badge on Shirt -->
+                                        <circle cx="112" cy="67" r="10" fill="#FFFDF9"/>
+                                        <path d="M112 60L114 64.5L119 65L115.2 68.3L116.3 73L112 70.5L107.7 73L108.8 68.3L105 65L110 64.5L112 60Z" fill="#F59E0B"/>
+                                        <!-- Baby Shorts / Pants -->
+                                        <path d="M156 105H204L210 144H185L180 124L175 144H150L156 105Z" fill="#0D9488" stroke="#0F172A" stroke-width="3" stroke-linejoin="round"/>
+                                        <line x1="156" y1="113" x2="204" y2="113" stroke="#FEF3C7" stroke-width="2.5"/>
+                                        <!-- Cute Baby Rattle / Toy -->
+                                        <circle cx="54" cy="108" r="13" fill="#F59E0B" stroke="#0F172A" stroke-width="2.5"/>
+                                        <rect x="51" y="121" width="6" height="22" rx="3" fill="#FFFDF9" stroke="#0F172A" stroke-width="2.5"/>
+                                        <circle cx="54" cy="145" r="5" fill="#FF5757" stroke="#0F172A" stroke-width="2"/>
+                                    </svg>
+                                </div>
+
+                                <div class="bg-white/95 backdrop-blur rounded-xl p-3 border border-amber-100">
+                                    <h3 class="font-bold text-sm sm:text-base text-carnival-navy">প্রিমিয়াম সামার কটন কম্বো প্যাক</h3>
+                                    <div class="flex items-center justify-between mt-1">
+                                        <div>
+                                            <span class="text-xs text-slate-400 line-through mr-1.5">৳১,৭৫০</span>
+                                            <span class="text-lg font-bold text-carnival-coral">৳১,১৯০</span>
+                                        </div>
+                                        <span class="text-[11px] font-bold text-carnival-teal bg-teal-50 px-2 py-0.5 rounded-md">রঙ ও সেলাই গ্যারান্টি</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Right Stacked Feature Highlights -->
+                            <div class="col-span-12 sm:col-span-5 flex flex-col justify-between gap-3">
+                                <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-3.5 flex flex-col justify-between h-full">
+                                    <div class="flex items-center justify-between">
+                                        <span class="w-8 h-8 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold">
+                                            <i class="fa-solid fa-shirt"></i>
+                                        </span>
+                                        <span class="text-[11px] font-bold text-amber-700 bg-amber-100/70 px-2 py-0.5 rounded-full">কিডস ফ্যাশন</span>
+                                    </div>
+                                    <div class="mt-2">
+                                        <h4 class="font-bold text-sm text-carnival-navy">ব্রিদেবল অর্গানিক ফেব্রিক</h4>
+                                        <p class="text-xs text-slate-600 mt-0.5">গরম ও সব ঋতুতে বাচ্চাদের জন্য আরামদায়ক ডিজাইন।</p>
+                                    </div>
+                                </div>
+
+                                <div class="bg-teal-50/70 border border-teal-200/70 rounded-2xl p-3.5 flex flex-col justify-between h-full">
+                                    <div class="flex items-center justify-between">
+                                        <span class="w-8 h-8 rounded-xl bg-white text-carnival-teal flex items-center justify-center shadow-sm">
+                                            <i class="fa-solid fa-baby-carriage"></i>
+                                        </span>
+                                        <span class="text-[11px] font-bold text-carnival-teal bg-white px-2 py-0.5 rounded-full">বেবি কেয়ার</span>
+                                    </div>
+                                    <div class="mt-2">
+                                        <h4 class="font-bold text-sm text-carnival-navy">BPA-Free বেবি এক্সেসরিজ</h4>
+                                        <p class="text-xs text-slate-600 mt-0.5">গ্রুমিং কিট, ক্যারিয়ার ব্যাগ ও নিরাপদ সফট খেলনা।</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bottom Quick Order Bar inside Hero Card -->
+                        <div class="mt-3.5 bg-carnival-navy text-white rounded-2xl px-4 py-3 flex items-center justify-between gap-3">
+                            <div class="text-xs sm:text-sm">
+                                <span class="text-amber-300 font-bold block sm:inline">আজকের অফার:</span>
+                                <span>যেকোনো ২টি আইটেমে <strong class="underline decoration-carnival-amber">ফ্রি হোম ডেলিভারি!</strong></span>
+                            </div>
+                            <button onclick="openOrderModal('স্পেশাল ৩-পিস কিডস কম্বো অফার', 1190)" class="bg-carnival-amber hover:bg-amber-400 text-carnival-navy text-xs sm:text-sm font-bold px-3.5 py-2 rounded-xl shrink-0 transition-colors">
+                                অফারটি নিন
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. INTERACTIVE PRODUCT SHOWCASE, PRICING & OFFERS SECTION -->
+    <section id="collection" class="py-14 sm:py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-8">
+                <span class="bg-rose-50 text-carnival-coral border border-rose-200 text-xs sm:text-sm font-bold px-3.5 py-1 rounded-full">সেরা কালেকশন ও ডিসকাউন্ট অফার</span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-carnival-navy mt-3">পছন্দের পোশাক ও বেবি এক্সেসরিজ বেছে নিন</h2>
+                <p class="text-slate-600 text-sm sm:text-base mt-2">ক্যাটাগরি সিলেক্ট করে আপনার সোনামণির পছন্দের পণ্যটি দেখুন এবং <strong>"এখনই অর্ডার করুন"</strong> বাটনে ক্লিক করুন।</p>
+            </div>
+
+            <!-- Filterable Category Tabs -->
+            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-9" id="filter-tabs">
+                <button data-filter="all" class="tab-btn active bg-carnival-navy text-white font-bold text-sm px-5 py-2.5 rounded-xl shadow-sm transition-all">
+                    সব কালেকশন (৬)
+                </button>
+                <button data-filter="clothing" class="tab-btn bg-white hover:bg-amber-50 text-slate-700 border border-slate-200 font-bold text-sm px-5 py-2.5 rounded-xl transition-all">
+                    <i class="fa-solid fa-shirt text-carnival-coral mr-1.5"></i>বাচ্চাদের পোশাক
+                </button>
+                <button data-filter="accessories" class="tab-btn bg-white hover:bg-amber-50 text-slate-700 border border-slate-200 font-bold text-sm px-5 py-2.5 rounded-xl transition-all">
+                    <i class="fa-solid fa-shapes text-carnival-teal mr-1.5"></i>বেবি এক্সেসরিজ
+                </button>
+                <button data-filter="combo" class="tab-btn bg-white hover:bg-amber-50 text-slate-700 border border-slate-200 font-bold text-sm px-5 py-2.5 rounded-xl transition-all">
+                    <i class="fa-solid fa-gift text-carnival-amber mr-1.5"></i>কম্বো অফার
+                </button>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="products-container">
+                
+                <!-- Product 1: Kids Clothing -->
+                <div class="product-item bg-white rounded-3xl border border-slate-200/80 shadow-card overflow-hidden flex flex-col justify-between group hover:-translate-y-1 transition-all duration-300" data-category="clothing">
+                    <div>
+                        <div class="relative h-56 bg-gradient-to-br from-rose-50 to-amber-50 flex items-center justify-center p-4 overflow-hidden">
+                            <span class="absolute top-3 left-3 bg-carnival-coral text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">৩০% ছাড়</span>
+                            <span class="absolute top-3 right-3 bg-white text-carnival-navy text-xs font-bold px-2.5 py-1 rounded-lg shadow-sm">০-২ বছর</span>
+                            <!-- Custom SVG Illustration: Baby Romper -->
+                            <svg viewBox="0 0 160 140" class="w-36 h-36 group-hover:scale-105 transition-transform duration-300" fill="none">
+                                <circle cx="80" cy="70" r="56" fill="#FFE4E6"/>
+                                <path d="M52 34L68 26C73 32 87 32 92 26L108 34L120 52L106 60L100 50V96L88 112H72L60 96V50L54 60L40 52L52 34Z" fill="#FF5757" stroke="#0F172A" stroke-width="2.5" stroke-linejoin="round"/>
+                                <circle cx="80" cy="64" r="12" fill="#FFFDF9"/>
+                                <circle cx="76" cy="62" r="1.5" fill="#0F172A"/>
+                                <circle cx="84" cy="62" r="1.5" fill="#0F172A"/>
+                                <path d="M76 67C78 69 82 69 84 67" stroke="#0F172A" stroke-width="1.8" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <div class="p-5">
+                            <div class="flex items-center gap-1 text-carnival-amber text-xs mb-1.5">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                <span class="text-slate-500 ml-1">(১৬৫ রিভিউ)</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-carnival-navy">প্রিমিয়াম অর্গানিক কটন বেবি রমপার</h3>
+                            <p class="text-slate-500 text-sm mt-1">নরম ও বাতাস চলাচল উপযোগী চায়না কটন কাপড়, বাচ্চার সারাদিনের আরামের জন্য সেরা।</p>
+                        </div>
+                    </div>
+                    <div class="px-5 pb-5 pt-3 border-t border-slate-100 flex items-center justify-between">
+                        <div>
+                            <span class="text-xs text-slate-400 line-through block">৳৭৯০</span>
+                            <span class="text-xl font-bold text-carnival-coral">৳৫৫০</span>
+                        </div>
+                        <button onclick="openOrderModal('প্রিমিয়াম অর্গানিক কটন বেবি রমপার', 550)" class="bg-carnival-navy hover:bg-carnival-coral text-white text-sm font-bold px-4 py-2.5 rounded-xl transition-colors flex items-center gap-2">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                            <span>এখনই অর্ডার করুন</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 2: Combo Offer (Featured) -->
+                <div class="product-item bg-white rounded-3xl border-2 border-carnival-amber shadow-card overflow-hidden flex flex-col justify-between group hover:-translate-y-1 transition-all duration-300 relative" data-category="combo">
+                    <div class="bg-carnival-amber text-carnival-navy text-[11px] font-bold text-center py-1 tracking-wide">
+                        🔥 বেস্ট সেলার কম্বো — ফ্রি হোম ডেলিভারি প্রযোজ্য
+                    </div>
+                    <div>
+                        <div class="relative h-52 bg-gradient-to-br from-amber-50 to-teal-50 flex items-center justify-center p-4 overflow-hidden">
+                            <span class="absolute top-3 left-3 bg-carnival-teal text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">সাশ্রয় ৳৫৬০</span>
+                            <span class="absolute top-3 right-3 bg-white text-carnival-navy text-xs font-bold px-2.5 py-1 rounded-lg shadow-sm">১-৮ বছর</span>
+                            <!-- Custom SVG Illustration: 3-Piece Combo -->
+                            <svg viewBox="0 0 180 140" class="w-40 h-36 group-hover:scale-105 transition-transform duration-300" fill="none">
+                                <circle cx="90" cy="70" r="56" fill="#FEF3C7"/>
+                                <path d="M40 42L56 34C61 39 71 39 76 34L92 42L102 58L90 64L86 55V104H46V55L42 64L30 58L40 42Z" fill="#0D9488" stroke="#0F172A" stroke-width="2.5" stroke-linejoin="round"/>
+                                <path d="M88 46L104 38C109 43 119 43 124 38L140 46L150 62L138 68L134 59V108H94V59L90 68L78 62L88 46Z" fill="#FF5757" stroke="#0F172A" stroke-width="2.5" stroke-linejoin="round"/>
+                                <rect x="103" y="72" width="22" height="14" rx="4" fill="#FBBF24"/>
+                            </svg>
+                        </div>
+                        <div class="p-5">
+                            <div class="flex items-center gap-1 text-carnival-amber text-xs mb-1.5">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                <span class="text-slate-500 ml-1">(৪২০ রিভিউ)</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-carnival-navy">স্পেশাল ৩-পিস কিডস কম্বো অফার</h3>
+                            <p class="text-slate-500 text-sm mt-1">৩টি আকর্ষণীয় কালারের টি-শার্ট ও শর্টস ফুল সেট। ছেলে ও মেয়ে উভয় বাচ্চার সাইজ রয়েছে।</p>
+                        </div>
+                    </div>
+                    <div class="px-5 pb-5 pt-3 border-t border-slate-100 flex items-center justify-between">
+                        <div>
+                            <span class="text-xs text-slate-400 line-through block">৳১,৭৫০</span>
+                            <span class="text-xl font-bold text-carnival-teal">৳১,১৯০</span>
+                        </div>
+                        <button onclick="openOrderModal('স্পেশাল ৩-পিস কিডস কম্বো অফার', 1190)" class="bg-carnival-coral hover:bg-carnival-coralHover text-white text-sm font-bold px-4 py-2.5 rounded-xl shadow-md transition-colors flex items-center gap-2">
+                            <i class="fa-solid fa-bolt"></i>
+                            <span>এখনই অর্ডার করুন</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 3: Baby Accessories -->
+                <div class="product-item bg-white rounded-3xl border border-slate-200/80 shadow-card overflow-hidden flex flex-col justify-between group hover:-translate-y-1 transition-all duration-300" data-category="accessories">
+                    <div>
+                        <div class="relative h-56 bg-gradient-to-br from-teal-50 to-cyan-50 flex items-center justify-center p-4 overflow-hidden">
+                            <span class="absolute top-3 left-3 bg-carnival-coral text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">২৫% ছাড়</span>
+                            <span class="absolute top-3 right-3 bg-white text-carnival-navy text-xs font-bold px-2.5 py-1 rounded-lg shadow-sm">বেবি কেয়ার</span>
+                            <!-- Custom SVG Illustration: Baby Care & Feeding Set -->
+                            <svg viewBox="0 0 160 140" class="w-36 h-36 group-hover:scale-105 transition-transform duration-300" fill="none">
+                                <circle cx="80" cy="70" r="56" fill="#CCFBF1"/>
+                                <!-- Feeding Bottle -->
+                                <rect x="52" y="48" width="26" height="58" rx="8" fill="#FFFDF9" stroke="#0F172A" stroke-width="2.5"/>
+                                <rect x="50" y="40" width="30" height="10" rx="3" fill="#F59E0B" stroke="#0F172A" stroke-width="2.2"/>
+                                <path d="M59 40C59 31 71 31 71 40" fill="#FFE4E6" stroke="#0F172A" stroke-width="2.2"/>
+                                <line x1="58" y1="64" x2="66" y2="64" stroke="#0D9488" stroke-width="2" stroke-linecap="round"/>
+                                <line x1="58" y1="76" x2="66" y2="76" stroke="#0D9488" stroke-width="2" stroke-linecap="round"/>
+                                <line x1="58" y1="88" x2="66" y2="88" stroke="#0D9488" stroke-width="2" stroke-linecap="round"/>
+                                <!-- Baby Brush / Kit Box -->
+                                <rect x="88" y="56" width="28" height="48" rx="7" fill="#FF5757" stroke="#0F172A" stroke-width="2.5"/>
+                                <circle cx="102" cy="76" r="6" fill="#FEF3C7"/>
+                            </svg>
+                        </div>
+                        <div class="p-5">
+                            <div class="flex items-center gap-1 text-carnival-amber text-xs mb-1.5">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                                <span class="text-slate-500 ml-1">(১১২ রিভিউ)</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-carnival-navy">১০-ইন-১ বেবি কেয়ার ও ফিডিং সেফটি কিট</h3>
+                            <p class="text-slate-500 text-sm mt-1">BPA-মুক্ত ফিডার, নেইল ট্রিমার, সফট ব্রাশ ও ডিজিটাল থার্মোমিটারসহ সম্পূর্ণ বক্স।</p>
+                        </div>
+                    </div>
+                    <div class="px-5 pb-5 pt-3 border-t border-slate-100 flex items-center justify-between">
+                        <div>
+                            <span class="text-xs text-slate-400 line-through block">৳৭২০</span>
+                            <span class="text-xl font-bold text-carnival-coral">৳৫৪০</span>
+                        </div>
+                        <button onclick="openOrderModal('১০-ইন-১ বেবি কেয়ার ও ফিডিং সেফটি কিট', 540)" class="bg-carnival-navy hover:bg-carnival-coral text-white text-sm font-bold px-4 py-2.5 rounded-xl transition-colors flex items-center gap-2">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                            <span>এখনই অর্ডার করুন</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 4: Kids Clothing (Princess Frock) -->
+                <div class="product-item bg-white rounded-3xl border border-slate-200/80 shadow-card overflow-hidden flex flex-col justify-between group hover:-translate-y-1 transition-all duration-300" data-category="clothing">
+                    <div>
+                        <div class="relative h-56 bg-gradient-to-br from-pink-50 to-rose-50 flex items-center justify-center p-4 overflow-hidden">
+                            <span class="absolute top-3 left-3 bg-carnival-coral text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">নতুন কালেকশন</span>
+                            <span class="absolute top-3 right-3 bg-white text-carnival-navy text-xs font-bold px-2.5 py-1 rounded-lg shadow-sm">২-১০ বছর</span>
+                            <!-- Custom SVG Illustration: Cute Cotton Frock -->
+                            <svg viewBox="0 0 160 140" class="w-36 h-36 group-hover:scale-105 transition-transform duration-300" fill="none">
+                                <circle cx="80" cy="70" r="56" fill="#FCE7F3"/>
+                                <path d="M62 30L70 25C74 30 86 30 90 25L98 30L106 46L96 52L93 46L116 108H44L67 46L64 52L54 46L62 30Z" fill="#F59E0B" stroke="#0F172A" stroke-width="2.5" stroke-linejoin="round"/>
+                                <path d="M65 55H95" stroke="#FF5757" stroke-width="4" stroke-linecap="round"/>
+                                <circle cx="80" cy="55" r="4" fill="#FFFDF9" stroke="#0F172A" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                        <div class="p-5">
+                            <div class="flex items-center gap-1 text-carnival-amber text-xs mb-1.5">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                <span class="text-slate-500 ml-1">(২১০ রিভিউ)</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-carnival-navy">প্রিন্সেস সফট কটন পার্টি ও ক্যাজুয়াল ফ্রক</h3>
+                            <p class="text-slate-500 text-sm mt-1">ভেতরে ১০০% সুতি লাইনিং দেওয়া, তাই উৎসব বা ঘরোয়া পরিবেশে বাচ্চা থাকবে একদম ফুরফুরে।</p>
+                        </div>
+                    </div>
+                    <div class="px-5 pb-5 pt-3 border-t border-slate-100 flex items-center justify-between">
+                        <div>
+                            <span class="text-xs text-slate-400 line-through block">৳১,১০০</span>
+                            <span class="text-xl font-bold text-carnival-coral">৳৭৯০</span>
+                        </div>
+                        <button onclick="openOrderModal('প্রিন্সেস সফট কটন পার্টি ফ্রক', 790)" class="bg-carnival-navy hover:bg-carnival-coral text-white text-sm font-bold px-4 py-2.5 rounded-xl transition-colors flex items-center gap-2">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                            <span>এখনই অর্ডার করুন</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 5: Baby Accessories (Baby Carrier) -->
+                <div class="product-item bg-white rounded-3xl border border-slate-200/80 shadow-card overflow-hidden flex flex-col justify-between group hover:-translate-y-1 transition-all duration-300" data-category="accessories">
+                    <div>
+                        <div class="relative h-56 bg-gradient-to-br from-indigo-50 to-sky-50 flex items-center justify-center p-4 overflow-hidden">
+                            <span class="absolute top-3 left-3 bg-carnival-teal text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">টপ রেটেড</span>
+                            <span class="absolute top-3 right-3 bg-white text-carnival-navy text-xs font-bold px-2.5 py-1 rounded-lg shadow-sm">৩-২৪ মাস</span>
+                            <!-- Custom SVG Illustration: Ergonomic Baby Carrier -->
+                            <svg viewBox="0 0 160 140" class="w-36 h-36 group-hover:scale-105 transition-transform duration-300" fill="none">
+                                <circle cx="80" cy="70" r="56" fill="#E0F2FE"/>
+                                <path d="M54 32L66 32L70 52H90L94 32L106 32L102 64L108 98C108 106 96 112 80 112C64 112 52 106 52 98L58 64L54 32Z" fill="#0F172A" stroke="#0F172A" stroke-width="2.5" stroke-linejoin="round"/>
+                                <rect x="64" y="64" width="32" height="28" rx="8" fill="#0D9488"/>
+                                <path d="M54 88H106" stroke="#F59E0B" stroke-width="5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <div class="p-5">
+                            <div class="flex items-center gap-1 text-carnival-amber text-xs mb-1.5">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                <span class="text-slate-500 ml-1">(৮৯ রিভিউ)</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-carnival-navy">এরগোনমিক বেবি ক্যারিয়ার ব্যাগ ও সিট</h3>
+                            <p class="text-slate-500 text-sm mt-1">ভ্রমণ বা বাইরে বের হলে বাচ্চাকে নিরাপদে ও আরামে বহন করার মজবুত কুশনযুক্ত ক্যারিয়ার।</p>
+                        </div>
+                    </div>
+                    <div class="px-5 pb-5 pt-3 border-t border-slate-100 flex items-center justify-between">
+                        <div>
+                            <span class="text-xs text-slate-400 line-through block">৳১,৩৫০</span>
+                            <span class="text-xl font-bold text-carnival-coral">৳৯৮০</span>
+                        </div>
+                        <button onclick="openOrderModal('এরগোনমিক বেবি ক্যারিয়ার ব্যাগ ও সিট', 980)" class="bg-carnival-navy hover:bg-carnival-coral text-white text-sm font-bold px-4 py-2.5 rounded-xl transition-colors flex items-center gap-2">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                            <span>এখনই অর্ডার করুন</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 6: Combo Offer (Newborn Gift Box) -->
+                <div class="product-item bg-white rounded-3xl border border-slate-200/80 shadow-card overflow-hidden flex flex-col justify-between group hover:-translate-y-1 transition-all duration-300" data-category="combo">
+                    <div>
+                        <div class="relative h-56 bg-gradient-to-br from-amber-50 to-orange-50 flex items-center justify-center p-4 overflow-hidden">
+                            <span class="absolute top-3 left-3 bg-carnival-amber text-carnival-navy text-xs font-bold px-3 py-1 rounded-full shadow-sm">গিফট বক্স</span>
+                            <span class="absolute top-3 right-3 bg-white text-carnival-navy text-xs font-bold px-2.5 py-1 rounded-lg shadow-sm">নবজাতক</span>
+                            <!-- Custom SVG Illustration: Newborn Gift Set -->
+                            <svg viewBox="0 0 160 140" class="w-36 h-36 group-hover:scale-105 transition-transform duration-300" fill="none">
+                                <circle cx="80" cy="70" r="56" fill="#FEF3C7"/>
+                                <rect x="44" y="54" width="72" height="54" rx="8" fill="#FF5757" stroke="#0F172A" stroke-width="2.5"/>
+                                <rect x="40" y="44" width="80" height="14" rx="4" fill="#F59E0B" stroke="#0F172A" stroke-width="2.5"/>
+                                <rect x="74" y="44" width="12" height="64" fill="#FFFDF9"/>
+                                <path d="M80 44C70 30 56 34 64 44H80Z" fill="#FFFDF9" stroke="#0F172A" stroke-width="2"/>
+                                <path d="M80 44C90 30 104 34 96 44H80Z" fill="#FFFDF9" stroke="#0F172A" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div class="p-5">
+                            <div class="flex items-center gap-1 text-carnival-amber text-xs mb-1.5">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                <span class="text-slate-500 ml-1">(২৪৫ রিভিউ)</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-carnival-navy">নিউবর্ন ৭-পিস প্রিমিয়াম গিফট কম্বো বক্স</h3>
+                            <p class="text-slate-500 text-sm mt-1">সুতি জামা, প্যান্ট, টুপি, মোজা, বিব ও নরম তোয়ালেসহ উপহার দেওয়ার জন্য সেরা বক্স।</p>
+                        </div>
+                    </div>
+                    <div class="px-5 pb-5 pt-3 border-t border-slate-100 flex items-center justify-between">
+                        <div>
+                            <span class="text-xs text-slate-400 line-through block">৳১,৫০০</span>
+                            <span class="text-xl font-bold text-carnival-coral">৳১,০৫০</span>
+                        </div>
+                        <button onclick="openOrderModal('নিউবর্ন ৭-পিস প্রিমিয়াম গিফট কম্বো বক্স', 1050)" class="bg-carnival-navy hover:bg-carnival-coral text-white text-sm font-bold px-4 py-2.5 rounded-xl transition-colors flex items-center gap-2">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                            <span>এখনই অর্ডার করুন</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. 3-STEP DELIVERY PROCESS SECTION -->
+    <section id="delivery" class="py-14 sm:py-16 bg-white border-y border-amber-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="bg-teal-50 text-carnival-teal border border-teal-200 text-xs sm:text-sm font-bold px-3.5 py-1 rounded-full">সহজ ও বিশ্বস্ত ডেলিভারি</span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-carnival-navy mt-3">আমাদের ৩-ধাপের ডেলিভারি প্রক্রিয়া</h2>
+                <p class="text-slate-600 text-sm sm:text-base mt-2">অনলাইনে কেনাকাটায় কোনো দুশ্চিন্তা নেই—পার্সেল হাতে পেয়ে চেক করে টাকা পরিশোধ করুন।</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Step 1 -->
+                <div class="bg-carnival-cream rounded-3xl p-6 sm:p-7 border border-amber-200/70 shadow-sm relative">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="w-12 h-12 rounded-2xl bg-carnival-coral text-white font-bold text-xl flex items-center justify-center shadow-md">১</span>
+                        <i class="fa-solid fa-phone-volume text-2xl text-carnival-coral/30"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-carnival-navy mb-2">সহজ অর্ডার ও কল কনফার্মেশন</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        পছন্দের পোশাক বা এক্সেসরিজ সিলেক্ট করে আপনার নাম, ঠিকানা ও মোবাইল নম্বর দিন। আমাদের প্রতিনিধি কল করে সাইজ ও অর্ডার নিশ্চিত করবেন।
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-carnival-cream rounded-3xl p-6 sm:p-7 border border-amber-200/70 shadow-sm relative">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="w-12 h-12 rounded-2xl bg-carnival-amber text-carnival-navy font-bold text-xl flex items-center justify-center shadow-md">২</span>
+                        <i class="fa-solid fa-truck-fast text-2xl text-carnival-amber/40"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-carnival-navy mb-2">দ্রুত হোম ডেলিভারি</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        কোয়ালিটি চেক ও নিরাপদ প্যাকিং শেষে <strong>ঢাকা সিটিতে ২৪-৪৮ ঘণ্টায়</strong> এবং <strong>সারাদেশে ২-৩ দিনের</strong> মধ্যে আপনার ঠিকানায় পৌঁছে যাবে।
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-carnival-cream rounded-3xl p-6 sm:p-7 border border-amber-200/70 shadow-sm relative">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="w-12 h-12 rounded-2xl bg-carnival-teal text-white font-bold text-xl flex items-center justify-center shadow-md">৩</span>
+                        <i class="fa-solid fa-hand-holding-dollar text-2xl text-carnival-teal/30"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-carnival-navy mb-2">পণ্য চেক করে ক্যাশ অন ডেলিভারি</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        আগে ১ টাকাও অগ্রিম নয়! ডেলিভারি ম্যানের সামনে পার্সেল খুলে কাপড়ের মান ও সাইজ চেক করে তারপর সম্পূর্ণ ক্যাশ পেমেন্ট করুন।
+                    </p>
+                </div>
+            </div>
+
+            <!-- Delivery Charge Summary Strip -->
+            <div class="mt-8 bg-carnival-navy text-white rounded-2xl p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="flex items-center gap-3.5 text-center sm:text-left">
+                    <div class="w-11 h-11 rounded-xl bg-carnival-amber text-carnival-navy flex items-center justify-center shrink-0 mx-auto sm:mx-0">
+                        <i class="fa-solid fa-truck text-lg"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-base">ডেলিভারি চার্জ ও ফ্রি শিপিং অফার</h4>
+                        <p class="text-slate-300 text-xs sm:text-sm">ঢাকা সিটির ভেতরে ৳৬০ এবং ঢাকার বাইরে সারাদেশে ৳১২০। ২টি বা তার বেশি পণ্য অর্ডারে ডেলিভারি সম্পূর্ণ ফ্রি!</p>
+                    </div>
+                </div>
+                <button onclick="openOrderModal('স্পেশাল ৩-পিস কিডস কম্বো অফার', 1190)" class="bg-carnival-coral hover:bg-carnival-coralHover text-white text-sm font-bold px-5 py-2.5 rounded-xl shrink-0 transition-colors">
+                    অর্ডার করুন
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. CUSTOMER REVIEW & SOCIAL PROOF SECTION (WITH DYNAMIC REVIEW SUBMISSION) -->
+    <section id="reviews" class="py-14 sm:py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+                <div>
+                    <span class="bg-amber-50 text-amber-800 border border-amber-200 text-xs sm:text-sm font-bold px-3.5 py-1 rounded-full">কাস্টমার রিভিউ ও মতামত</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-carnival-navy mt-3">ফেসবুক ও ইউটিউব ক্রেতাদের অভিজ্ঞতা</h2>
+                </div>
+                <div class="bg-white px-4 py-2.5 rounded-2xl border border-slate-200 shadow-sm inline-flex items-center gap-2.5 self-start">
+                    <div class="text-carnival-amber text-base">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="text-sm font-bold text-carnival-navy">৪.৯/৫ গড় রেটিং (৩,২০০+ রিভিউ)</span>
+                </div>
+            </div>
+
+            <!-- Reviews Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10" id="reviews-list">
+                <!-- Review 1 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-card flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="text-carnival-amber text-xs">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="text-[11px] font-bold text-carnival-teal bg-teal-50 px-2.5 py-0.5 rounded-full">
+                                <i class="fa-solid fa-circle-check mr-1"></i>ভেরিফাইড ক্রেতা
+                            </span>
+                        </div>
+                        <span class="inline-block text-[11px] font-semibold bg-slate-100 text-slate-600 px-2.5 py-0.5 rounded-md mb-2.5">
+                            কিনেছেন: স্পেশাল ৩-পিস কম্বো অফার
+                        </span>
+                        <p class="text-slate-700 text-sm leading-relaxed">
+                            "ফেসবুক পেজে ভিডিও দেখে আমার ৪ বছরের ছেলের জন্য ৩-পিস কম্বো অর্ডার করেছিলাম। কাপড় এতটাই সফট যে বাচ্চা সারাদিন পরে খুব আরাম পাচ্ছে। ধোয়ার পরও রঙ একদম নতুনের মতো আছে।"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 mt-5 pt-4 border-t border-slate-100">
+                        <div class="w-10 h-10 rounded-full bg-rose-100 text-carnival-coral font-bold flex items-center justify-center">ফা</div>
+                        <div>
+                            <h4 class="font-bold text-sm text-carnival-navy">ফারহানা আক্তার মিম</h4>
+                            <span class="text-xs text-slate-500">মিরপুর-১০, ঢাকা</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-card flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="text-carnival-amber text-xs">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="text-[11px] font-bold text-carnival-teal bg-teal-50 px-2.5 py-0.5 rounded-full">
+                                <i class="fa-solid fa-circle-check mr-1"></i>ভেরিফাইড ক্রেতা
+                            </span>
+                        </div>
+                        <span class="inline-block text-[11px] font-semibold bg-slate-100 text-slate-600 px-2.5 py-0.5 rounded-md mb-2.5">
+                            কিনেছেন: ১০-ইন-১ বেবি কেয়ার সেফটি কিট
+                        </span>
+                        <p class="text-slate-700 text-sm leading-relaxed">
+                            "ইউটিউব রিভিউ দেখে সিলেটে অর্ডার করেছিলাম। মাত্র ২ দিনে হোম ডেলিভারি পেয়েছি। ডেলিভারি ম্যানের সামনে বক্স খুলে সবকিছু চেক করে পেমেন্ট করেছি। খুবই বিশ্বস্ত অনলাইন শপ।"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 mt-5 pt-4 border-t border-slate-100">
+                        <div class="w-10 h-10 rounded-full bg-teal-100 text-carnival-teal font-bold flex items-center justify-center">মা</div>
+                        <div>
+                            <h4 class="font-bold text-sm text-carnival-navy">মাহমুদুল হাসান</h4>
+                            <span class="text-xs text-slate-500">জিন্দাবাজার, সিলেট</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-card flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="text-carnival-amber text-xs">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <span class="text-[11px] font-bold text-carnival-teal bg-teal-50 px-2.5 py-0.5 rounded-full">
+                                <i class="fa-solid fa-circle-check mr-1"></i>ভেরিফাইড ক্রেতা
+                            </span>
+                        </div>
+                        <span class="inline-block text-[11px] font-semibold bg-slate-100 text-slate-600 px-2.5 py-0.5 rounded-md mb-2.5">
+                            কিনেছেন: প্রিন্সেস সফট কটন পার্টি ফ্রক
+                        </span>
+                        <p class="text-slate-700 text-sm leading-relaxed">
+                            "মেয়ের জন্মদিনের জন্য ফ্রকটি নিয়েছিলাম। প্রথমে সাইজ একটু ছোট হয়েছিল, কিন্তু ওদের সাপোর্টে জানানোর পরদিনই কোনো ঝামেলা ছাড়া বড় সাইজ দিয়ে গেছে। অসাধারণ কাস্টমার সার্ভিস!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 mt-5 pt-4 border-t border-slate-100">
+                        <div class="w-10 h-10 rounded-full bg-amber-100 text-amber-700 font-bold flex items-center justify-center">শা</div>
+                        <div>
+                            <h4 class="font-bold text-sm text-carnival-navy">শারমিন সুলতানা</h4>
+                            <span class="text-xs text-slate-500">আগ্রাবাদ, চট্টগ্রাম</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive 'আপনার মতামত দিন' (Add Review Form) -->
+            <div class="bg-white rounded-3xl border border-amber-200/80 p-6 sm:p-8 shadow-soft max-w-3xl mx-auto">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-10 h-10 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center">
+                        <i class="fa-solid fa-pen-to-square text-lg"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg sm:text-xl font-bold text-carnival-navy">আপনার মতামত দিন</h3>
+                        <p class="text-xs sm:text-sm text-slate-500">কিডস কার্নিভাল থেকে কেনাকাটার অভিজ্ঞতা অন্য অভিভাবকদের সাথে শেয়ার করুন</p>
+                    </div>
+                </div>
+
+                <form id="add-review-form" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">আপনার নাম *</label>
+                        <input type="text" id="rev-name" required placeholder="যেমন: তাসনিয়া রহমান" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:border-carnival-coral outline-none text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">আপনার জেলা / এলাকা *</label>
+                        <input type="text" id="rev-location" required placeholder="যেমন: উত্তরা, ঢাকা" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:border-carnival-coral outline-none text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">কোন পণ্যটি কিনেছেন?</label>
+                        <input type="text" id="rev-product" placeholder="যেমন: বেবি রমপার সেট" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:border-carnival-coral outline-none text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">রেটিং দিন</label>
+                        <select id="rev-rating" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:border-carnival-coral outline-none text-sm bg-white">
+                            <option value="5">★★★★★ (৫/৫ - অসাধারণ)</option>
+                            <option value="4">★★★★☆ (৪/৫ - খুব ভালো)</option>
+                            <option value="3">★★★☆☆ (৩/৫ - ভালো)</option>
+                        </select>
+                    </div>
+                    <div class="sm:col-span-2">
+                        <label class="block text-xs font-bold text-slate-700 mb-1">আপনার মতামত লিখুন *</label>
+                        <textarea id="rev-comment" rows="2" required placeholder="কাপড়ের মান ও ডেলিভারি সার্ভিস কেমন লেগেছে লিখুন..." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:border-carnival-coral outline-none text-sm"></textarea>
+                    </div>
+                    <div class="sm:col-span-2 flex items-center justify-between gap-3">
+                        <span id="review-toast" class="text-xs font-bold text-carnival-teal hidden">
+                            <i class="fa-solid fa-circle-check mr-1"></i>ধন্যবাদ! আপনার রিভিউটি যুক্ত হয়েছে।
+                        </span>
+                        <button type="submit" class="ml-auto bg-carnival-navy hover:bg-carnival-coral text-white font-bold text-sm px-6 py-2.5 rounded-xl transition-colors">
+                            মতামত পোস্ট করুন
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. CUSTOMER ISSUE RESOLUTION & FEEDBACK CENTER -->
+    <section id="support" class="py-14 sm:py-16 bg-carnival-navy text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                
+                <!-- Left Assurance Info -->
+                <div class="lg:col-span-5 space-y-5">
+                    <span class="inline-flex items-center gap-2 bg-white/10 text-amber-300 text-xs font-bold px-3.5 py-1.5 rounded-full border border-white/15">
+                        <i class="fa-solid fa-shield-heart"></i>
+                        <span>কাস্টমার সমস্যা সমাধান ও ফিডব্যাক কেন্দ্র</span>
+                    </span>
+                    <h2 class="text-2xl sm:text-3xl font-bold leading-snug">
+                        যেকোনো সমস্যায় পাশে আছে <span class="text-carnival-amber">কিডস কার্নিভাল</span> সাপোর্ট টিম
+                    </h2>
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                        অর্ডারকৃত পণ্যের সাইজ পরিবর্তন, ডেলিভারি আপডেট বা পণ্যের মান নিয়ে যেকোনো অভিযোগ বা পরামর্শ থাকলে পাশের ফর্মটি পূরণ করুন। তাৎক্ষণিক টিকেট আইডিসহ আমরা <strong>৩০ মিনিটের মধ্যে</strong> সমাধান দেব।
+                    </p>
+
+                    <div class="space-y-3 pt-1">
+                        <div class="flex items-start gap-3 bg-white/5 p-3.5 rounded-2xl border border-white/10">
+                            <i class="fa-solid fa-ruler-combined text-carnival-coral text-lg mt-0.5"></i>
+                            <div>
+                                <h4 class="font-bold text-sm">৭-দিনের সহজ সাইজ পরিবর্তন</h4>
+                                <p class="text-xs text-slate-400">বাচ্চার গায়ে ছোট বা বড় হলে দ্রুত নতুন সাইজ পাঠিয়ে দেওয়া হয়।</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 bg-white/5 p-3.5 rounded-2xl border border-white/10">
+                            <i class="fa-solid fa-headset text-carnival-teal text-lg mt-0.5"></i>
+                            <div>
+                                <h4 class="font-bold text-sm">৩০ মিনিটে কল ব্যাক গ্যারান্টি</h4>
+                                <p class="text-xs text-slate-400">সকাল ৯টা থেকে রাত ১১টা পর্যন্ত সরাসরি কাস্টমার কেয়ার সাপোর্ট।</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Issue Resolution Form -->
+                <div class="lg:col-span-7">
+                    <div class="bg-white text-carnival-navy rounded-3xl p-6 sm:p-8 shadow-2xl">
+                        <h3 class="text-xl font-bold mb-1">সমস্যার ধরন জানিয়ে টিকেট তৈরি করুন</h3>
+                        <p class="text-slate-500 text-sm mb-5">সঠিক তথ্য দিন, আমাদের প্রতিনিধি দ্রুত আপনার সাথে যোগাযোগ করবেন।</p>
+
+                        <form id="support-ticket-form" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1.5">সমস্যার ধরন নির্বাচন করুন *</label>
+                                    <select id="issue-type" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:border-carnival-coral outline-none text-sm bg-white font-medium">
+                                        <option value="সাইজ পরিবর্তন">সাইজ পরিবর্তন (Size Exchange)</option>
+                                        <option value="ডেলিভারি আপডেট">ডেলিভারি আপডেট ও ট্র্যাকিং</option>
+                                        <option value="পণ্যের মান">পণ্যের মান সংক্রান্ত অভিযোগ</option>
+                                        <option value="রিটার্ন/এক্সচেঞ্জ">রিটার্ন / এক্সচেঞ্জ অনুরোধ</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1.5">অর্ডার আইডি অথবা মোবাইল নম্বর *</label>
+                                    <input type="text" id="issue-contact" required placeholder="যেমন: 017XXXXXXXX বা #KC-1024" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:border-carnival-coral outline-none text-sm">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1.5">সমস্যা বা মতামতের বিস্তারিত বিবরণ *</label>
+                                <textarea id="issue-details" rows="3" required placeholder="আপনার সমস্যাটি সংক্ষেপে লিখুন যাতে আমরা দ্রুত সমাধান করতে পারি..." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:border-carnival-coral outline-none text-sm"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-carnival-coral hover:bg-carnival-coralHover text-white font-bold py-3.5 rounded-xl shadow-cta transition-all flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-ticket"></i>
+                                <span>সাপোর্ট টিকেট সাবমিট করুন</span>
+                            </button>
+                        </form>
+
+                        <!-- Instant Ticket Receipt Box -->
+                        <div id="ticket-receipt" class="hidden mt-5 p-4 rounded-2xl bg-teal-50 border border-teal-200 text-teal-950">
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-carnival-teal text-xl mt-0.5"></i>
+                                <div>
+                                    <h4 class="font-bold text-sm">সাপোর্ট টিকেট সফলভাবে তৈরি হয়েছে!</h4>
+                                    <p class="text-xs text-teal-900 mt-1 leading-relaxed" id="ticket-receipt-msg"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. INTERACTIVE FAQ ACCORDION -->
+    <section id="faq" class="py-14 sm:py-16">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <span class="bg-rose-50 text-carnival-coral border border-rose-200 text-xs sm:text-sm font-bold px-3.5 py-1 rounded-full">সচরাচর জিজ্ঞাসিত প্রশ্ন (FAQ)</span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-carnival-navy mt-3">আপনার সাধারণ প্রশ্নের উত্তরসমূহ</h2>
+            </div>
+
+            <div class="space-y-3" id="faq-accordion">
+                <!-- FAQ 1 -->
+                <div class="faq-box open bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden">
+                    <button class="faq-btn w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-bold text-carnival-navy text-base hover:text-carnival-coral transition-colors">
+                        <span>১. কাপড়ের মান কেমন? বাচ্চার ত্বকের জন্য কি আরামদায়ক হবে?</span>
+                        <i class="fa-solid fa-chevron-down faq-chevron text-slate-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-5 pb-4 text-slate-600 text-sm leading-relaxed">
+                        আমাদের প্রতিটি পোশাক ১০০% পিওর সফট কটন ও অর্গানিক ফেব্রিকে তৈরি। এটি অত্যন্ত নরম ও বাতাস চলাচল উপযোগী, তাই গরমে বা সব ঋতুতে বাচ্চার কোমল ত্বকে কোনো র‍্যাশ বা অস্বস্তি হবে না। ধোয়ার পর রঙ ওঠারও কোনো ভয় নেই।
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-box bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden">
+                    <button class="faq-btn w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-bold text-carnival-navy text-base hover:text-carnival-coral transition-colors">
+                        <span>২. সঠিক সাইজ কীভাবে নির্বাচন করব এবং সাইজ না মিললে করণীয় কী?</span>
+                        <i class="fa-solid fa-chevron-down faq-chevron text-slate-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-5 pb-4 text-slate-600 text-sm leading-relaxed">
+                        অর্ডার ফর্মে আপনার বাচ্চার বয়স অনুযায়ী সাইজ সিলেক্ট করতে পারবেন। এছাড়া আমাদের প্রতিনিধি কল করলে বাচ্চার উচ্চতা ও স্বাস্থ্য অনুযায়ী সঠিক সাইজ সাজেশন দেবেন। পার্সেল পাওয়ার ৭ দিনের মধ্যে সাইজ পরিবর্তনের সম্পূর্ণ সুযোগ রয়েছে।
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-box bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden">
+                    <button class="faq-btn w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-bold text-carnival-navy text-base hover:text-carnival-coral transition-colors">
+                        <span>৩. ডেলিভারি চার্জ কত এবং অর্ডার করতে কি অগ্রিম টাকা দিতে হয়?</span>
+                        <i class="fa-solid fa-chevron-down faq-chevron text-slate-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-5 pb-4 text-slate-600 text-sm leading-relaxed">
+                        অর্ডার করতে অগ্রিম ১ টাকাও দিতে হবে না। ঢাকা সিটির ভেতরে ডেলিভারি চার্জ ৳৬০ এবং ঢাকার বাইরে সারাদেশে ৳১২০। তবে যেকোনো ২টি বা তার বেশি পণ্য একসাথে অর্ডার করলে ডেলিভারি চার্জ সম্পূর্ণ ফ্রি!
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="faq-box bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden">
+                    <button class="faq-btn w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-bold text-carnival-navy text-base hover:text-carnival-coral transition-colors">
+                        <span>৪. এক্সচেঞ্জ বা রিটার্ন পলিসি কীভাবে কাজ করে?</span>
+                        <i class="fa-solid fa-chevron-down faq-chevron text-slate-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-5 pb-4 text-slate-600 text-sm leading-relaxed">
+                        আপনি ডেলিভারি ম্যানের সামনে পার্সেল খুলে চেক করে নিতে পারবেন। কোনো কারণে পণ্যে ত্রুটি থাকলে বা সাইজ পরিবর্তন করতে চাইলে পার্সেল পাওয়ার ৭ দিনের মধ্যে আমাদের সাপোর্ট সেন্টারে জানালে আমরা দ্রুত এক্সচেঞ্জ করে দেব।
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. CONTACT & FOOTER SECTION -->
+    <section id="contact" class="py-12 bg-white border-t border-amber-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-r from-amber-50 via-rose-50 to-teal-50 rounded-3xl p-6 sm:p-10 border border-amber-200/70 text-center">
+                <h2 class="text-2xl sm:text-3xl font-bold text-carnival-navy">সরাসরি যোগাযোগ ও সোশ্যাল মিডিয়া</h2>
+                <p class="text-slate-600 text-sm sm:text-base mt-2 max-w-xl mx-auto">
+                    নতুন কালেকশনের ভিডিও দেখতে ও সরাসরি মেসেজে অর্ডার করতে যুক্ত থাকুন আমাদের ফেসবুক পেজ, ইউটিউব চ্যানেল ও হোয়াটসঅ্যাপে।
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 mt-7 max-w-4xl mx-auto">
+                    <a href="https://facebook.com" target="_blank" class="flex items-center justify-center gap-2.5 bg-[#1877F2] hover:bg-[#166fe5] text-white font-bold py-3.5 px-4 rounded-2xl shadow-sm transition-transform hover:-translate-y-0.5">
+                        <i class="fa-brands fa-facebook text-xl"></i>
+                        <span>ফেসবুক পেজ</span>
+                    </a>
+                    <a href="https://youtube.com" target="_blank" class="flex items-center justify-center gap-2.5 bg-[#FF0000] hover:bg-[#e60000] text-white font-bold py-3.5 px-4 rounded-2xl shadow-sm transition-transform hover:-translate-y-0.5">
+                        <i class="fa-brands fa-youtube text-xl"></i>
+                        <span>ইউটিউব চ্যানেল</span>
+                    </a>
+                    <a href="https://wa.me/8801700000000" target="_blank" class="flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#1ebe5d] text-white font-bold py-3.5 px-4 rounded-2xl shadow-sm transition-transform hover:-translate-y-0.5">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                        <span>হোয়াটসঅ্যাপ</span>
+                    </a>
+                    <a href="tel:01700000000" class="flex items-center justify-center gap-2.5 bg-carnival-navy hover:bg-carnival-slate text-white font-bold py-3.5 px-4 rounded-2xl shadow-sm transition-transform hover:-translate-y-0.5">
+                        <i class="fa-solid fa-phone-volume text-lg text-carnival-amber"></i>
+                        <span>হটলাইন: ০১৭০০-০০০০০০</span>
+                    </a>
+                </div>
+
+                <div class="mt-6 text-xs sm:text-sm text-slate-600 flex flex-wrap items-center justify-center gap-4">
+                    <span><i class="fa-solid fa-location-dot text-carnival-coral mr-1"></i>শোরুম ও অফিস: রোড ১১, সেক্টর ৬, উত্তরা, ঢাকা</span>
+                    <span><i class="fa-solid fa-clock text-carnival-teal mr-1"></i>হটলাইন সময়: সকাল ৯টা - রাত ১১টা</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-carnival-navy text-slate-400 py-6 text-center text-xs sm:text-sm">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="text-white font-bold mb-1">কিডস কার্নিভাল (Kids Carnival Bangladesh)</p>
+            <p>© ২০২৬ কিডস কার্নিভাল | সর্বস্বত্ব সংরক্ষিত • বিশ্বস্ত অনলাইন কিডস ফ্যাশন ও বেবি এক্সেসরিজ স্টোর</p>
+        </div>
+    </footer>
+
+    <!-- STICKY MOBILE BOTTOM CTA BAR (For Facebook & YouTube In-App Browsers) -->
+    <div class="fixed bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 p-2.5 flex items-center gap-2.5 md:hidden shadow-[0_-4px_20px_rgba(15,23,42,0.1)]">
+        <a href="https://wa.me/8801700000000" target="_blank" class="flex-1 bg-emerald-50 text-emerald-700 border border-emerald-200 font-bold py-2.5 rounded-xl flex items-center justify-center gap-1.5 text-sm">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+            <span>মেসেজ</span>
+        </a>
+        <button onclick="openOrderModal('স্পেশাল ৩-পিস কিডস কম্বো অফার', 1190)" class="flex-[2] bg-carnival-coral text-white font-bold py-2.5 rounded-xl shadow-cta flex items-center justify-center gap-2 text-sm">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span>এখনই অর্ডার করুন</span>
+        </button>
+    </div>
+
+    <!-- WORKING QUICK ORDER MODAL -->
+    <div id="quick-order-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-900/70 backdrop-blur-sm p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl relative max-h-[92vh] overflow-y-auto">
+            <button onclick="closeOrderModal()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-slate-100 hover:bg-rose-100 text-slate-600 hover:text-carnival-coral flex items-center justify-center transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="inline-flex items-center gap-1.5 text-carnival-coral font-bold text-xs uppercase tracking-wider mb-1">
+                <i class="fa-solid fa-bolt"></i>
+                <span>ওপেন-বক্স ক্যাশ অন ডেলিভারি</span>
+            </div>
+            <h3 class="text-xl font-bold text-carnival-navy mb-4">আপনার অর্ডারটি সম্পন্ন করুন</h3>
+
+            <!-- Selected Product & Quantity Control Box -->
+            <div class="bg-amber-50/90 border border-amber-200 rounded-2xl p-3.5 mb-4 space-y-2.5">
+                <div class="flex items-start justify-between gap-2">
+                    <div>
+                        <span class="text-[11px] text-slate-500 block">নির্বাচিত পণ্য:</span>
+                        <strong id="order-modal-title" class="text-sm text-carnival-navy">স্পেশাল ৩-পিস কিডস কম্বো অফার</strong>
+                    </div>
+                    <span id="order-modal-unit-price" class="text-base font-bold text-carnival-coral shrink-0">৳১,১৯০</span>
+                </div>
+                <div class="flex items-center justify-between pt-2 border-t border-amber-200/70">
+                    <span class="text-xs font-bold text-slate-700">পরিমাণ (Quantity):</span>
+                    <div class="flex items-center gap-2">
+                        <button type="button" onclick="changeQuantity(-1)" class="w-7 h-7 rounded-lg bg-white border border-amber-300 text-carnival-navy font-bold hover:bg-amber-100">-</button>
+                        <span id="order-qty-display" class="text-sm font-bold w-6 text-center">১</span>
+                        <button type="button" onclick="changeQuantity(1)" class="w-7 h-7 rounded-lg bg-white border border-amber-300 text-carnival-navy font-bold hover:bg-amber-100">+</button>
+                    </div>
+                </div>
+                <p id="free-delivery-badge" class="hidden text-[11px] font-bold text-carnival-teal bg-teal-50 px-2.5 py-1 rounded-lg border border-teal-200">
+                    <i class="fa-solid fa-gift mr-1"></i>অভিনন্দন! ২ বা ততোধিক পণ্যে ডেলিভারি চার্জ সম্পূর্ণ ফ্রি!
+                </p>
+            </div>
+
+            <!-- Order Form -->
+            <form id="modal-order-form" class="space-y-3.5">
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">আপনার পূর্ণ নাম *</label>
+                    <input type="text" id="cust-name" required placeholder="যেমন: তানভীর আহমেদ" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:border-carnival-coral outline-none text-sm">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">মোবাইল নম্বর *</label>
+                    <input type="tel" id="cust-phone" required placeholder="০১XXXXXXXXX" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:border-carnival-coral outline-none text-sm">
+                </div>
+
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">সাইজ / বয়স</label>
+                        <select id="cust-size" class="w-full px-3 py-2.5 rounded-xl border border-slate-200 focus:border-carnival-coral outline-none text-sm bg-white">
+                            <option value="০-৬ মাস">০-৬ মাস</option>
+                            <option value="৬-১২ মাস">৬-১২ মাস</option>
+                            <option value="১-২ বছর">১-২ বছর</option>
+                            <option value="৩-৪ বছর" selected>৩-৪ বছর</option>
+                            <option value="৫-৭ বছর">৫-৭ বছর</option>
+                            <option value="৮-১০ বছর">৮-১০ বছর</option>
+                            <option value="স্ট্যান্ডার্ড (এক্সেসরিজ)">স্ট্যান্ডার্ড (এক্সেসরিজ)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">ডেলিভারি এলাকা</label>
+                        <select id="cust-zone" onchange="calculateOrderTotal()" class="w-full px-3 py-2.5 rounded-xl border border-slate-200 focus:border-carnival-coral outline-none text-sm bg-white">
+                            <option value="60">ঢাকা সিটি (৳৬০)</option>
+                            <option value="120">ঢাকার বাইরে (৳১২০)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">সম্পূর্ণ ডেলিভারি ঠিকানা *</label>
+                    <input type="text" id="cust-address" required placeholder="বাসা নং, রোড, এলাকা, থানা ও জেলা" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:border-carnival-coral outline-none text-sm">
+                </div>
+
+                <!-- Price Breakdown -->
+                <div class="bg-slate-50 rounded-2xl p-3.5 border border-slate-200 space-y-1.5 text-xs sm:text-sm">
+                    <div class="flex justify-between text-slate-600">
+                        <span>পণ্যের মূল্য:</span>
+                        <span id="summary-subtotal" class="font-semibold">৳১,১৯০</span>
+                    </div>
+                    <div class="flex justify-between text-slate-600">
+                        <span>ডেলিভারি চার্জ:</span>
+                        <span id="summary-shipping" class="font-semibold">৳৬০</span>
+                    </div>
+                    <div class="flex justify-between text-carnival-navy font-bold text-base pt-1.5 border-t border-slate-200">
+                        <span>সর্বমোট বিল (ক্যাশ অন ডেলিভারি):</span>
+                        <span id="summary-grand-total" class="text-carnival-coral">৳১,২৫০</span>
+                    </div>
+                </div>
+
+                <button type="submit" class="w-full bg-carnival-coral hover:bg-carnival-coralHover text-white font-bold py-3.5 rounded-xl shadow-cta transition-all flex items-center justify-center gap-2 text-base">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>অর্ডার কনফার্ম করুন</span>
+                </button>
+            </form>
+
+            <!-- Instant Order Confirmation Receipt -->
+            <div id="order-receipt-view" class="hidden py-4 space-y-4">
+                <div class="text-center">
+                    <div class="w-14 h-14 rounded-full bg-teal-100 text-carnival-teal flex items-center justify-center mx-auto text-3xl mb-2">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-carnival-navy">অর্ডার কনফার্ম হয়েছে!</h4>
+                    <p class="text-xs text-slate-500 mt-0.5">আপনার ডিজিটাল অর্ডার রিসিট নিচে দেওয়া হলো</p>
+                </div>
+
+                <div class="bg-slate-50 rounded-2xl p-4 border border-slate-200 text-xs sm:text-sm space-y-2" id="receipt-details-box">
+                    <!-- Populated via JS -->
+                </div>
+
+                <button onclick="closeOrderModal()" class="w-full bg-carnival-navy hover:bg-carnival-slate text-white font-bold py-3 rounded-xl text-sm">
+                    ঠিক আছে, ধন্যবাদ
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vanilla JavaScript Interactivity -->
+    <script>
+        let selectedUnitPrice = 1190;
+        let selectedProductName = 'স্পেশাল ৩-পিস কিডস কম্বো অফার';
+        let orderQuantity = 1;
+
+        // Helper: Convert English digits to Bengali digits
+        function toBnDigits(input) {
+            const bn = ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'];
+            return input.toString().replace(/\d/g, d => bn[d]);
+        }
+
+        // 1. Category Filter Tabs
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const productItems = document.querySelectorAll('.product-item');
+
+        tabButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                tabButtons.forEach(b => {
+                    b.classList.remove('active', 'bg-carnival-navy', 'text-white');
+                    b.classList.add('bg-white', 'text-slate-700', 'border', 'border-slate-200');
+                });
+                btn.classList.add('active', 'bg-carnival-navy', 'text-white');
+                btn.classList.remove('bg-white', 'text-slate-700', 'border', 'border-slate-200');
+
+                const filter = btn.getAttribute('data-filter');
+                productItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'flex';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // 2. Quick Order Modal & Calculation
+        const orderModal = document.getElementById('quick-order-modal');
+        const modalOrderForm = document.getElementById('modal-order-form');
+        const orderReceiptView = document.getElementById('order-receipt-view');
+
+        function openOrderModal(title, price) {
+            selectedProductName = title;
+            selectedUnitPrice = price;
+            orderQuantity = 1;
+
+            document.getElementById('order-modal-title').textContent = title;
+            document.getElementById('order-modal-unit-price').textContent = '৳' + toBnDigits(price.toLocaleString('en-US'));
+            document.getElementById('order-qty-display').textContent = toBnDigits(orderQuantity);
+
+            calculateOrderTotal();
+
+            modalOrderForm.classList.remove('hidden');
+            orderReceiptView.classList.add('hidden');
+            orderModal.classList.remove('hidden');
+            orderModal.classList.add('flex');
+        }
+
+        function closeOrderModal() {
+            orderModal.classList.add('hidden');
+            orderModal.classList.remove('flex');
+        }
+
+        function changeQuantity(delta) {
+            orderQuantity = Math.max(1, Math.min(10, orderQuantity + delta));
+            document.getElementById('order-qty-display').textContent = toBnDigits(orderQuantity);
+            calculateOrderTotal();
+        }
+
+        function calculateOrderTotal() {
+            const subtotal = selectedUnitPrice * orderQuantity;
+            const baseShipping = parseInt(document.getElementById('cust-zone').value, 10);
+            // Free delivery when ordering 2 or more items
+            const shipping = orderQuantity >= 2 ? 0 : baseShipping;
+            const grandTotal = subtotal + shipping;
+
+            const freeBadge = document.getElementById('free-delivery-badge');
+            if (orderQuantity >= 2) {
+                freeBadge.classList.remove('hidden');
+            } else {
+                freeBadge.classList.add('hidden');
+            }
+
+            document.getElementById('summary-subtotal').textContent = '৳' + toBnDigits(subtotal.toLocaleString('en-US'));
+            document.getElementById('summary-shipping').textContent = shipping === 0 ? 'ফ্রি (৳০)' : '৳' + toBnDigits(shipping);
+            document.getElementById('summary-grand-total').textContent = '৳' + toBnDigits(grandTotal.toLocaleString('en-US'));
+        }
+
+        orderModal.addEventListener('click', (e) => {
+            if (e.target === orderModal) closeOrderModal();
+        });
+
+        modalOrderForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('cust-name').value;
+            const phone = document.getElementById('cust-phone').value;
+            const size = document.getElementById('cust-size').value;
+            const address = document.getElementById('cust-address').value;
+            const totalText = document.getElementById('summary-grand-total').textContent;
+            const orderId = '#KC-' + toBnDigits(Math.floor(1000 + Math.random() * 9000));
+
+            document.getElementById('receipt-details-box').innerHTML = `
+                <div class="flex justify-between"><span class="text-slate-500">অর্ডার আইডি:</span><strong class="text-carnival-coral">${orderId}</strong></div>
+                <div class="flex justify-between"><span class="text-slate-500">ক্রেতার নাম:</span><strong>${name}</strong></div>
+                <div class="flex justify-between"><span class="text-slate-500">মোবাইল:</span><strong>${phone}</strong></div>
+                <div class="flex justify-between"><span class="text-slate-500">পণ্য ও পরিমাণ:</span><strong>${selectedProductName} (${toBnDigits(orderQuantity)}টি)</strong></div>
+                <div class="flex justify-between"><span class="text-slate-500">সাইজ:</span><strong>${size}</strong></div>
+                <div class="flex justify-between"><span class="text-slate-500">ঠিকানা:</span><strong class="text-right max-w-[200px]">${address}</strong></div>
+                <div class="flex justify-between pt-2 border-t border-slate-200"><span class="font-bold">সর্বমোট পরিশোধযোগ্য:</span><strong class="text-carnival-teal text-base">${totalText}</strong></div>
+            `;
+
+            modalOrderForm.classList.add('hidden');
+            orderReceiptView.classList.remove('hidden');
+            modalOrderForm.reset();
+        });
+
+        // 3. Dynamic Customer Review Submission
+        const addReviewForm = document.getElementById('add-review-form');
+        const reviewsList = document.getElementById('reviews-list');
+        const reviewToast = document.getElementById('review-toast');
+
+        addReviewForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('rev-name').value.trim();
+            const location = document.getElementById('rev-location').value.trim();
+            const product = document.getElementById('rev-product').value.trim() || 'কিডস কার্নিভাল কালেকশন';
+            const rating = parseInt(document.getElementById('rev-rating').value, 10);
+            const comment = document.getElementById('rev-comment').value.trim();
+
+            let starsHtml = '';
+            for (let i = 0; i < 5; i++) {
+                starsHtml += i < rating ? '<i class="fa-solid fa-star"></i>' : '<i class="fa-regular fa-star"></i>';
+            }
+
+            const initial = name.charAt(0);
+            const newCard = document.createElement('div');
+            newCard.className = 'bg-white p-6 rounded-3xl border-2 border-carnival-amber/60 shadow-card flex flex-col justify-between';
+            newCard.innerHTML = `
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="text-carnival-amber text-xs">${starsHtml}</div>
+                        <span class="text-[11px] font-bold text-carnival-teal bg-teal-50 px-2.5 py-0.5 rounded-full">
+                            <i class="fa-solid fa-circle-check mr-1"></i>নতুন রিভিউ
+                        </span>
+                    </div>
+                    <span class="inline-block text-[11px] font-semibold bg-slate-100 text-slate-600 px-2.5 py-0.5 rounded-md mb-2.5">
+                        কিনেছেন: ${product}
+                    </span>
+                    <p class="text-slate-700 text-sm leading-relaxed">"${comment}"</p>
+                </div>
+                <div class="flex items-center gap-3 mt-5 pt-4 border-t border-slate-100">
+                    <div class="w-10 h-10 rounded-full bg-amber-100 text-amber-800 font-bold flex items-center justify-center">${initial}</div>
+                    <div>
+                        <h4 class="font-bold text-sm text-carnival-navy">${name}</h4>
+                        <span class="text-xs text-slate-500">${location}</span>
+                    </div>
+                </div>
+            `;
+
+            reviewsList.prepend(newCard);
+            addReviewForm.reset();
+            reviewToast.classList.remove('hidden');
+            setTimeout(() => reviewToast.classList.add('hidden'), 4000);
+        });
+
+        // 4. Customer Issue Resolution & Support Ticket Generator
+        const supportForm = document.getElementById('support-ticket-form');
+        const ticketReceipt = document.getElementById('ticket-receipt');
+        const ticketReceiptMsg = document.getElementById('ticket-receipt-msg');
+
+        supportForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const issueType = document.getElementById('issue-type').value;
+            const contact = document.getElementById('issue-contact').value.trim();
+            const ticketNumber = '#SUP-' + toBnDigits(Math.floor(1000 + Math.random() * 9000));
+
+            ticketReceiptMsg.innerHTML = `
+                আপনার টিকেট আইডি: <strong>${ticketNumber}</strong> (বিষয়: <strong>${issueType}</strong>)। 
+                আমাদের কাস্টমার সাপোর্ট টিম আগামী <strong>৩০ মিনিটের মধ্যে</strong> (${contact}) নম্বরে যোগাযোগ করে সমাধান প্রদান করবে।
+            `;
+            ticketReceipt.classList.remove('hidden');
+            supportForm.reset();
+        });
+
+        // 5. Interactive FAQ Accordion
+        const faqBoxes = document.querySelectorAll('.faq-box');
+        faqBoxes.forEach(box => {
+            const btn = box.querySelector('.faq-btn');
+            btn.addEventListener('click', () => {
+                const isOpen = box.classList.contains('open');
+                faqBoxes.forEach(b => b.classList.remove('open'));
+                if (!isOpen) box.classList.add('open');
+            });
+        });
+    </script>
+</body>
+</html>
